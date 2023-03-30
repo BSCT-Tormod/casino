@@ -1,0 +1,10 @@
+<div class="background">
+  <div class="main-container">
+    <h1>Slot Machines</h1>
+      <div class="slot-machine-card">
+        <app-slot-machine
+          *ngFor="let slotMachine of slotMachines|async"
+          [slotMachine]="slotMachine" routerLink="/SlotMachine/{{slotMachine.id}}"></app-slot-machine>
+      </div>
+  </div>
+</div>
