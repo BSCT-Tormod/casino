@@ -1,1 +1,27 @@
 <h1 *ngIf="slotMachine">{{slotMachine.name}}</h1>
+
+<button (click)="spin()">SPIN</button>
+
+<button (click)="changeBet()">CHANGE BET</button>
+<p>Actual bet : {{slotMachine!.bets[activeBet]}}</p>
+
+<h3>Your credits : {{credits}}</h3>
+<img src="assets/images/noCredits.jpg" alt="no credits ?" id="noCredits" style="visibility: hidden; position: absolute;">
+
+<button (click)="onClose()">orevoir</button>
+
+<div class="row" id="1">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[0][0]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[1][0]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[2][0]}}.png" alt="le numero">
+</div>
+<div class="row" id="2">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[0][1]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[1][1]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[2][1]}}.png" alt="le numero">
+</div>
+<div class="row" id="3">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[0][2]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[1][2]}}.png" alt="le numero">
+  <img *ngIf="slotMachine" src="assets/images/slotsMachines/{{slotMachine.id}}/{{matrice[2][2]}}.png" alt="le numero">
+</div>
