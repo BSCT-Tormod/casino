@@ -7,12 +7,15 @@ import { SlotMachineComponent } from './games/slot-machine/slot-machine.componen
 import { MainComponent } from './main/main.component';
 import { SlotMachineGameComponent } from './slot-machine-game/slot-machine-game.component';
 import { SlotMachineListComponent } from './slot-machine-list/slot-machine-list.component';
+import { LogComponent } from './account/log/log.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'SlotMachine', component: SlotMachineListComponent },
   { path: 'BlackJack', component: BlackJackComponent},
   { path:'Roulette', component: RouletteComponent },
+  { path: 'Login', component: LogComponent},
+  { path: 'SingIn', component: LogComponent},
   { path: 'SlotMachine/:id', component: SlotMachineGameComponent }
 ];
 

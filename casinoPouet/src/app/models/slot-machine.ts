@@ -29,17 +29,17 @@ export class SlotMachine {
       if(matrice[0][reel] == matrice [1][reel] && matrice[1][reel] == matrice[2][reel]) { // 3 symbols
         win = symbols[matrice[0][reel]-1];
       }else if((matrice[0][reel] == matrice [1][reel] && wilds.includes(matrice[2][reel]))){ // 2 symbols + 1 wild
-        win = symbols[matrice[0][reel]-1];
+        win = symbols[matrice[0][reel]-1]/2;
       }else if(matrice[0][reel] == matrice [2][reel] && wilds.includes(matrice[1][reel])){ // symbol + wild + symbol
-        win = symbols[matrice[0][reel]-1];
+        win = symbols[matrice[0][reel]-1]/2;
       }else if(matrice[1][reel] == matrice [2][reel] && wilds.includes(matrice[0][reel])) { // wild + 2 symbols
-        win = symbols[matrice[1][reel]-1];
+        win = symbols[matrice[1][reel]-1]/2;
       }else if((wilds.includes(matrice[0][reel]) && wilds.includes(matrice[1][reel]))){ // 2 wilds + symbol
-        win = symbols[matrice[2][reel]-1];
+        win = symbols[matrice[2][reel]-1]/4;
       }else if(wilds.includes(matrice[0][reel]) && wilds.includes(matrice[2][reel])){ // wild + symbol + wild
-        win = symbols[matrice[1][reel]-1];
+        win = symbols[matrice[1][reel]-1]/4;
       } else if (wilds.includes(matrice[1][reel]) && wilds.includes(matrice[2][reel])) { // symbol + 2 wilds
-        win = symbols[matrice[0][reel]-1];
+        win = symbols[matrice[0][reel]-1]/4;
       }
     }
     return win;

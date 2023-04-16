@@ -10,6 +10,8 @@ import { MainComponent } from './main/main.component';
 import { SlotMachineListComponent } from './slot-machine-list/slot-machine-list.component';
 import { SlotMachineGameComponent } from './slot-machine-game/slot-machine-game.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LogComponent } from './account/log/log.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     MainComponent,
     SlotMachineComponent,
     SlotMachineListComponent,
-    SlotMachineGameComponent
+    SlotMachineGameComponent,
+    LogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,7 +5,9 @@
 <button (click)="changeBet()">CHANGE BET</button>
 <p>Actual bet : {{slotMachine!.bets[activeBet]}}</p>
 
-<h3>Your credits : {{credits}}</h3>
+<h3>{{account.name}}</h3>
+
+<h3>Your credits : {{account.pouets}}</h3>
 <img src="assets/images/noCredits.jpg" alt="no credits ?" id="noCredits" style="visibility: hidden; position: absolute;">
 
 <button (click)="onClose()">orevoir</button>

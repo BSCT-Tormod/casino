@@ -6,5 +6,9 @@
       <a class="button-74" routerLink="BlackJack" routerLinkActive="active">Black jack</a>
       <a class="button-74" routerLink="Roulette" routerLinkActive="active">Roulette</a>
     </div>
+    <div class="account">
+      <a *ngIf="account.id == 0" href="#" class="log-button" routerLink="Login" routerLinkActive="active">Mon Compte</a>
+      <a *ngIf="account.id != 0" href="#" class="log-button" routerLink="Login" routerLinkActive="active">{{account.name}}</a>
+    </div>
   </div>
 </div>
